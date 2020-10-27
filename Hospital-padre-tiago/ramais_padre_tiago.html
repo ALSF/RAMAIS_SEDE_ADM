@@ -1,0 +1,183 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="http://172.16.0.11:8080/style-guide/css/fluig-style-guide.min.css">
+    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery.js"></script>
+    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script src="http://172.16.0.11:8080/portal/resources/js/mustache/mustache-min.js"></script>
+    <script src="http://172.16.0.11:8080/style-guide/js/fluig-style-guide.min.js"></script>
+
+    <meta charset="UTF-8">
+
+    <style>
+        .box {
+            width: 600px;
+            height: 600px;
+            background: #fff;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+
+        <nav class="navbar navbar-light" style="background-color:" role="navigation">
+            <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">>Fixed top</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://www.franciscanosnaprovidencia.org.br/associacao/nossasobras_detalhes/79/Hospital-Padre-Tiago-Na-Provid%C3%AAncia-de-Deus">Hospital Padre Tiago na Providencia de Deus  </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a onclick="mostrar10">home</a></li>
+                        <li class="active"><a href="http://172.16.0.10:8080/portal/home">Fluig</a></li>
+                        <li class="active"><a href="https://outlook.office.com/mail/inbox">E-mail</a></li>
+                        <li class="active"><a href="http://alsf.rocket.chat/" target="blank">Rocket.chat</a></li>
+                        <li class="active"><a href="http://www.transparencia-alsf.org.br/">Portal Transparência</a></li>
+                        <!-- <li class="active"><a data-toggle="modal" data-target="#divModal">manuais</a></li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">GLPI<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="http://172.16.0.5/front/ticket.form.php">abrir chamado</a></li>
+                                <li><a href="http://172.16.0.5/plugins/reservation/front/menu.php">Reserva de Sala de Reunião</a></li>
+                                <li><a href="http://172.16.0.5/plugins/dashboard/front/index1.php">Dashboard de chamados</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Vazio</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Vazio</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a onclick="abrirManual()">Manuais</a></li>
+                </div>
+
+            </div>
+
+        </nav>
+        <br>
+
+        <h1 id="nomeEmpresa" align="center">Lista de Ramais – Hospital Padre Tiago</h1>
+        <br>
+        <div class="container">
+            <div class="box">
+                <h2 class="sub-header"></h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Admisnitração - Frei Saulo </th>
+                                <th>236</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admisnitração - Fábio</td>
+                                <td>235</td>
+                            </tr>
+                            <tr>
+                                <td>Agendamento de Consultas</td>
+                                <td>205</td>
+                            </tr>
+                            <tr>
+                                <td>Centro Cirurgico</td>
+                                <td>225</td>
+                            </tr>
+                            <tr>
+                                <td>Convenios</td>
+                                <td>234</td>
+                            </tr>
+                            <tr>
+                                <td>Coordenação Enfermagem</td>
+                                <td>238</td>
+                            </tr>
+                            <tr>
+                                <td>Farmácia</td>
+                                <td>222</td>
+                            </tr>
+                            <tr>
+                                <td>Faturamento - Polyana</td>
+                                <td>233</td>
+                            </tr>
+                            <tr>
+                                <td>Financeiro</td>
+                                <td>214</td>
+                            </tr>
+                            <tr>
+                                <td>Laboratório São José</td>
+                                <td>208</td>
+                            </tr>
+                            <tr>
+                                <td>Nutricção</td>
+                                <td>224</td>
+                            </tr>
+                            <tr>
+                                <td>Oncologia - Farmácia</td>
+                                <td>206</td>
+                            </tr>
+                            <tr>
+                                <td>Oncologia -Recepção</td>
+                                <td>212</td>
+                            </tr>
+                            <tr>
+                                <td>Posto de Enfermagem</td>
+                                <td>213</td>
+                            </tr>
+                            <tr>
+                                <td>Pronto-Atendimento</td>
+                                <td>204</td>
+                            </tr>
+                            <tr>
+                                <td>Radialogia</td>
+                                <td>2019</td>
+                            </tr>
+                            <tr>
+                                <td>Recepção</td>
+                                <td>220/211</td>
+                            </tr>
+                            <tr>
+                                <td>Recursos Humanos</td>
+                                <td>230</td>
+                            </tr>
+                            <tr>
+                                <td>Secretaria</td>
+                                <td>229</td>
+                            </tr>
+                            <tr>
+                                <td>Tecnologia da Informação</td>
+                                <td>232</td>
+                            </tr>
+                            <tr>
+                                <td>teleonista</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td>Tomografia</td>
+                                <td>209</td>
+                            </tr>
+                            <tr>
+                                <td>Triagem</td>
+                                <td>211</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
