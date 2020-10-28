@@ -1,0 +1,315 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="http://172.16.0.11:8080/style-guide/css/fluig-style-guide.min.css">
+    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery.js"></script>
+    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script src="http://172.16.0.11:8080/portal/resources/js/mustache/mustache-min.js"></script>
+    <script src="http://172.16.0.11:8080/style-guide/js/fluig-style-guide.min.js"></script>
+
+    <meta charset="UTF-8">
+
+    <style>
+        .container {
+            justify-content: center;
+            align-items: center
+        }
+        
+        ;
+        .box {
+            width: 600px;
+            height: 600px;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+
+        <nav class="navbar navbar-light" style="background-color:" role="navigation">
+            <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">>Fixed top</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://www.franciscanosnaprovidencia.org.br/associacao/nossasobras_detalhes/79/Hospital-Padre-Tiago-Na-Provid%C3%AAncia-de-Deus">AME - Atibaia  </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a onclick="mostrar10">Home</a></li>
+                        <li class="active"><a href="http://172.16.0.10:8080/portal/home">Fluig</a></li>
+                        <li class="active"><a href="https://outlook.office.com/mail/inbox">E-mail</a></li>
+                        <li class="active"><a href="http://alsf.rocket.chat/" target="blank">Rocket.chat</a></li>
+                        <li class="active"><a href="http://www.transparencia-alsf.org.br/">Portal Transparência</a></li>
+                        <!-- <li class="active"><a data-toggle="modal" data-target="#divModal">manuais</a></li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">GLPI<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="http://172.16.0.5/front/ticket.form.php">abrir chamado</a></li>
+                                <li><a href="http://172.16.0.5/plugins/reservation/front/menu.php">Reserva de Sala de Reunião</a></li>
+                                <li><a href="http://172.16.0.5/plugins/dashboard/front/index1.php">Dashboard de chamados</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">GitHub - ALSF (Em Breve)</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">
+                                    AgendaLar  (Em Breve)
+                                </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a onclick="abrirManual()">Manuais</a></li>
+                </div>
+
+            </div>
+
+
+        </nav>
+        <br>
+
+        <h1 id="nomeEmpresa" align="center">Lista de Ramais – AME ATIBAIA</h1>
+        <br>
+        <div class="container">
+            <div class="box">
+                <h2 align="center" class="sub-header">ADMINISTRATIVO / COORDENADORES</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ramal</th>
+                                <th>Local / Andar</th>
+                                <th>Nome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1685</td>
+                                <td>Administração - Gerência (S2)</td>
+                                <td>Renan</td>
+                            </tr>
+                            <tr>
+                                <td>1901</td>
+                                <td>Administração - Celular</td>
+                                <td>Renan</td>
+                            </tr>
+                            <tr>
+                                <td>1694</td>
+                                <td>Administração - Analista (S2)</td>
+                                <td>Angélica</td>
+                            </tr>
+                            <tr>
+                                <td>1672</td>
+                                <td>Almoxarifado (S2)</td>
+                                <td>Alisson</td>
+                            </tr>
+                            <tr>
+                                <td>1657</td>
+                                <td>CIA/Call Center - Supervisão (T)</td>
+                                <td>Paula Okada</td>
+                            </tr>
+                            <tr>
+                                <td>1656</td>
+                                <td>CIA/Call Center - Agendamento (T)</td>
+                                <td>Márcio</td>
+                            </tr>
+                            <tr>
+                                <td>1692</td>
+                                <td>Controladoria / Custos (S2)</td>
+                                <td>Analista Mayara</td>
+                            </tr>
+                            <tr>
+                                <td>1742</td>
+                                <td>Controladoria / Custos (S2)</td>
+                                <td>Auxiliar Luiz Felipe</td>
+                            </tr>
+                            <tr>
+                                <td>1746</td>
+                                <td>Diretoria (S2)</td>
+                                <td>Frei Roberto</td>
+                            </tr>
+                            <tr>
+                                <td>1902</td>
+                                <td>Diretoria </td>
+                                <td>Celular Frei Roberto</td>
+                            </tr>
+                            <tr>
+                                <td>1676</td>
+                                <td>Diretoria Técnica / Qualidade Médica (S2)</td>
+                                <td>Dr. Caled / Dra. Luciana Nicoletti</td>
+                            </tr>
+                            <tr>
+                                <td>1687</td>
+                                <td>Engenharia Clínica (S2)</td>
+                                <td>Gabriel</td>
+                            </tr>
+                            <tr>
+                                <td>1909</td>
+                                <td>Engenharia Clínica (S2)</td>
+                                <td> Celular Gabriel</td>
+                            </tr>
+                            <tr>
+                                <td>1663</td>
+                                <td>Enfermagem - Supervisão (S1)</td>
+                                <td>Val</td>
+                            </tr>
+                            <tr>
+                                <td>1903</td>
+                                <td>Enfermagem - Supervisão (Celular)</td>
+                                <td>Val</td>
+                            </tr>
+                            <tr>
+                                <td>1691</td>
+                                <td>Equipe Multidisciplinar - Coordenação (T)</td>
+                                <td>Camilla</td>
+                            </tr>
+                            <tr>
+                                <td>1673</td>
+                                <td>Farmácia (S2)</td>
+                                <td>Susy / Juliana / Paglia</td>
+                            </tr>
+                            <tr>
+                                <td>1690</td>
+                                <td>Faturamento - Supervisão (S2)</td>
+                                <td>Murilo</td>
+                            </tr>
+                            <tr>
+                                <td>1711</td>
+                                <td>Faturamento (S2)</td>
+                                <td>Thiago</td>
+                            </tr>
+                            <tr>
+                                <td>1688</td>
+                                <td>Faturamento (S2)</td>
+                                <td>Carlos</td>
+                            </tr>
+                            <tr>
+                                <td>1735</td>
+                                <td>Manutenção (S2)</td>
+                                <td>Maurício / Flávio</td>
+                            </tr>
+                            <tr>
+                                <td>1740</td>
+                                <td>Portaria - Liderança (S2)</td>
+                                <td>Paulo</td>
+                            </tr>
+                            <tr>
+                                <td>1717</td>
+                                <td>Qualidade (S2)</td>
+                                <td>Caio</td>
+                            </tr>
+                            <tr>
+                                <td>1658</td>
+                                <td>Recepção - Supervisão (T)</td>
+                                <td>Silmara</td>
+                            </tr>
+                            <tr>
+                                <td>1680</td>
+                                <td>Recepção - Lider / Auxiliar (T)</td>
+                                <td>Erika / Leila</td>
+                            </tr>
+                            <tr>
+                                <td>1652</td>
+                                <td>Recursos Humanos (S2)</td>
+                                <td>Larissa</td>
+                            </tr>
+                            <tr>
+                                <td>1674</td>
+                                <td>Recursos Humanos (S2)</td>
+                                <td>Raiany</td>
+                            </tr>
+                            <tr>
+                                <td>1678</td>
+                                <td>SAME (S2)</td>
+                                <td>Adriana</td>
+                            </tr>
+                            <tr>
+                                <td>1659</td>
+                                <td>Serviço de Controle de Infecção Ambulatorial (S2)</td>
+                                <td>Juliana / Dra. Renata</td>
+                            </tr>
+                            <tr>
+                                <td>1686</td>
+                                <td>Segurança do Trabalho (S2)</td>
+                                <td>Tânia</td>
+                            </tr>
+                            <tr>
+                                <td>1679</td>
+                                <td>Tecnologia da Informação - Analista (S2)</td>
+                                <td>Felipe</td>
+                            </tr>
+                            <tr>
+                                <td>1677</td>
+                                <td>Tecnologia da Informação - Técnico</td>
+                                <td>(S2) Ronaldo</td>
+                            </tr>
+                            <tr>
+                                <td>1908</td>
+                                <td>Tecnologia da Informação - Celular</td>
+                                <td>Felipe / Ronaldo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h2 align="center" class="sub-header">CALL CENTER</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ramal</th>
+                                <th>Local / Andar</th>
+                                <th>Nome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1650</td>
+                                <td>CIA/Call Center (T)</td>
+                                <td>Telefonista Erika / Noemi</td>
+                            </tr>
+                            <tr>
+                                <td>1654</td>
+                                <td>CIA/Call Center (T)</td>
+                                <td>Daniela / Flávia Santos</td>
+                            </tr>
+                            <tr>
+                                <td>1655</td>
+                                <td>CIA/Call Center (T)</td>
+                                <td>Jaqueline / Fernanda</td>
+                            </tr>
+                            <tr>
+                                <td>1681</td>
+                                <td>CIA/Call Center (T)</td>
+                                <td>Alex / Alane</td>
+                            </tr>
+                            <tr>
+                                <td>1745</td>
+                                <td>CIA/Call Center (T)</td>
+                                <td>Flávia Cardoso</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h4 align="center">Desenvolvido com ❤️ Pela <a href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar são Francisco na Providencia de Deus</a></h4>
+        <p align="center"><a href="https://github.com/fhfavaretto">Fabio Favaretto - TI Sede Administrativa Jaci - SP</a></p>
+    </div>
+
+</body>
+
+</html>
