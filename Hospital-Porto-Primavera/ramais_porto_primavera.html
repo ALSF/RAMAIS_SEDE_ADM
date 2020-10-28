@@ -31,7 +31,7 @@
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[0]; // Para buscar ramais , ou nomes
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -99,7 +99,7 @@
         <h1 id="nomeEmpresa" align="center">Lista de Ramais – Hospital Estadual Porto Primavera</h1>
         <br>
         <div class="container">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar Ramais" title="Type in a name">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar Ramais">
         </div>
 
 
@@ -541,7 +541,7 @@
             </div>
         </div>
         <hr>
-        <h4 align="center">Desenvolvido com ❤️ Pela Associação Lar são Francisco na Providencia de Deus</h4>
+        <h4 align="center">Desenvolvido com ❤️ Pela <a href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar são Francisco na Providencia de Deus</a></h4>
         <p align="center"><a href="https://github.com/fhfavaretto">Fabio Favaretto - TI Sede Administrativa Jaci - SP</a></p>
     </div>
 
