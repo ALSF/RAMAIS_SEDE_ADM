@@ -23,6 +23,26 @@
             align-items: center;
         }
     </style>
+    <script>
+        function buscarRamal() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable1", "myTable2", "myTable3", "myTable4", "myTable5");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Para buscar ramais , ou nomes
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
 
@@ -78,13 +98,16 @@
         <br>
 
         <h1 id="nomeEmpresa" align="center">Lista de Ramais – AME ATIBAIA</h1>
+        <div class="container">
+            <input type="text" id="myInput" onkeyup="buscarRamal()" placeholder="Buscar Ramais">
+        </div>
         <br>
         <div class="container">
             <!--coordenadores-->
             <div class="box">
                 <h2 align="center" class="sub-header">ADMINISTRATIVO / COORDENADORES</h2>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table id="myTable1" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Ramal</th>
@@ -268,7 +291,7 @@
             <div class="box">
                 <h2 align="center" class="sub-header">CALL CENTER</h2>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table id="myTable2" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Ramal</th>
@@ -312,7 +335,7 @@
             <div class="box">
                 <h2 align="center" class="sub-header">RECEPÇÕES / OUTROS ATENDIMENTOS</h2>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table id="myTable3" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Ramal</th>
@@ -421,7 +444,7 @@
             <div class="box">
                 <h2 align="center" class="sub-header">ENFERMAGEM</h2>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table id="myTable4" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Ramal</th>
@@ -470,7 +493,7 @@
             <div class="box">
                 <h2 align="center" class="sub-header">Consultorios</h2>
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table id="myTable5" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Consultório 01 (T) - Fono / Psico</th>
@@ -561,27 +584,27 @@
                             <tr>
                                 <td>1712</td>
                                 <td>Consultório 20 (T) - Ecocardiograma/Cardio Infantil</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1719</td>
                                 <td>Consultório 22 (S1) - Cirurgia Geral</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1725</td>
                                 <td>Consultório 23 (S1) - Ultrassom 1</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1695</td>
                                 <td>Consultório 24 (S1) - Ultrassom 2</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1723</td>
                                 <td>Consultório 25 (S1) - Urologia</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1683</td>
@@ -591,12 +614,12 @@
                             <tr>
                                 <td>1689</td>
                                 <td>Consultório 27 (S1) - Urodinâmica</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1702</td>
                                 <td>Consultório 28 (S1) - Eletroencefalo (EEG)</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1708</td>
@@ -611,12 +634,12 @@
                             <tr>
                                 <td>1715</td>
                                 <td>Consultório 32 (S1) - Neurologia</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1736</td>
                                 <td>Consultório 33 (S1) - Ortopedia 1</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1727</td>
@@ -626,17 +649,17 @@
                             <tr>
                                 <td>1732</td>
                                 <td>Consultório 35 (S1) - Ortopedia 2</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1696</td>
                                 <td>Consultório 39 (S1) - Vascular / Procto</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1734</td>
                                 <td>Consultório 40 (S1) - Espirometria</td>
-                                <td> </td>
+                                <td><span class="label label-danger">Em Falta</span></td>
                             </tr>
                             <tr>
                                 <td>1698</td>
@@ -648,9 +671,64 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="box">
+                <h2 align="center" class="sub-header">Radiologia</h2>
+                <div class="table-responsive">
+                    <table id="myTable6" class="table table-hover">
+                        <thead>
 
+                            <td>Ramal</td>
+                            <td>Local / Andar</td>
+                            <td>Nome</td>
 
+                        </thead>
 
+                        <tbody>
+                            <tr>
+                                <td>1669</th>
+                                    <td>Radiologia - Gerência / Sala de Laudo (S1)</th>
+                                        <td>Denise (PSZ Imagem)</td>
+                            </tr>
+                            <tr>
+                                <td>1721</td>
+                                <td>Tomografia (S1)</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h2 align="center" class="sub-header">Diversos</h2>
+                <div class="table-responsive">
+                    <table id="myTable7" class="table table-hover">
+                        <thead>
+
+                            <td>Ramal</td>
+                            <td>Local / Andar</td>
+                            <td>Nome</td>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1728</td>
+                                <td>Auditoria (S2)</th>
+                                    <td></td>
+                            </tr>
+                            <tr>
+                                <td>1671</td>
+                                <td>Portaria - Funcionarios (S2)</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         <hr>
         <h4 align="center">Desenvolvido com ❤️ Pela <a href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar são Francisco na Providencia de Deus</a></h4>
         <p align="center"><a href="https://github.com/fhfavaretto">Fabio Favaretto - TI Sede Administrativa Jaci - SP</a></p>
