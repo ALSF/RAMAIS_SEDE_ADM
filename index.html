@@ -1,1046 +1,296 @@
-<html>
 
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Dashboard Template · Bootstrap v5.0</title>
 
-    <link rel="stylesheet" type="text/css" href="http://172.16.0.11:8080/style-guide/css/fluig-style-guide.min.css">
-    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery.js"></script>
-    <script src="http://172.16.0.11:8080/portal/resources/js/jquery/jquery-ui.min.js"></script>
-    <script src="http://172.16.0.11:8080/portal/resources/js/mustache/mustache-min.js"></script>
-    <script src="http://172.16.0.11:8080/style-guide/js/fluig-style-guide.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
-    <meta charset="UTF-8">
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
 
     <style>
-        body {
-            padding: 25px;
-            background-color;
-            color;
-            font-size: 25px;
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-        
-        .dark-mode {
-            background-color: #373737;
-            color: white;
-            font-color
-        }
-        
-        .footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: ;
-            text-align: center;
-            position: absolute;
-        }
-        
-        ;
-        #esquerda {
-            padding-top: 20px;
-            padding-right: 90px;
-            padding-bottom: 20px;
-            padding-left: 120px;
-            font-size: 120px;
-            position: absolute;
-            border-radius: 10px;
-        }
-        
-        ;
-        #direita {
-            padding-top: 20px;
-            padding-right: 90px;
-            padding-bottom: 20px;
-            padding-left: 120px;
-            font-size: small;
-            border-radius: 10px;
-        }
-        
-        ;
-        #nomeEmpresa {
-            font-size: 250%;
-        }
-        
-        #icone {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-        }
-        
-        #switchbar {
-            padding-left: 350px;
-            padding-right: 10px;
-            margin-bottom: 10px;
-        }
-        
-        #switchbarfilho {
-            position: inline;
-        }
-        
-        .modal.left .modal-dialog,
-        .modal.right .modal-dialog {
-            position: absolute;
-            margin: 10px;
-            width: 420px;
-            height: 420px;
-            -webkit-transform: translate3d(0%, 0, 0);
-            -ms-transform: translate3d(0%, 0, 0);
-            -o-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
-        }
-        
-        .modal.left .modal-content,
-        .modal.right .modal-content {
-            height: 420px;
-        }
-        
-        .modal.left.fade.in .modal-dialog {
-            left: 0;
-        }
-        /*Right*/
-        
-        .modal.right.fade .modal-dialog {
-            -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
-        }
-        
-        .modal.right.fade.in .modal-dialog {
-            right: 10;
-        }
-        /* ----- MODAL STYLE ----- */
-        
-        .modal-content {
-            border-radius: 0;
-            border: none;
-        }
-        
-        .modal-header {
-            border-bottom-color: #EEEEEE;
-            background-color: #FAFAFA;
-        }
+      }
     </style>
 
-</head>
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</header>
 
-<body>
-    <div class="fluig-style-guide">
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file"></span>
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart"></span>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Integrations
+            </a>
+          </li>
+        </ul>
 
-        <nav class="navbar navbar-light" style="background-color:" role="navigation">
-            <div class="container-fluid">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Saved reports</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Current month
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Last quarter
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Social engagement
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Year-end sale
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">>Fixed top</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar São Francisco</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a onclick="mostrar10">home</a></li>
-                        <li class="active"><a href="http://172.16.0.10:8080/portal/home">Fluig</a></li>
-                        <li class="active"><a href="https://outlook.office.com/mail/inbox">E-mail</a></li>
-                        <li class="active"><a href="http://alsf.rocket.chat/" target="blank">Rocket.chat</a></li>
-                        <li class="active"><a href="http://www.transparencia-alsf.org.br/">Portal Transparência</a></li>
-                        <!-- <li class="active"><a data-toggle="modal" data-target="#divModal">manuais</a></li> -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">GLPI<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://172.16.0.5/front/ticket.form.php">abrir chamado</a></li>
-                                <li><a href="http://172.16.0.5/plugins/reservation/front/menu.php">Reserva de Sala de Reunião</a></li>
-                                <li><a href="http://172.16.0.5/plugins/dashboard/front/index1.php">Dashboard de chamados</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Vazio</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Vazio</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- barra de pesquisa não utilizada porém pronta
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                    -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a onclick="abrirManual()">Manuais</a></li>
-                        <li class="active"><a onclick="myFunction()">dark-mode</a></li>
-
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manuais<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li>  -->
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <br>
-
-        <h1 id="nomeEmpresa" align="center">Lista de Ramais – Sede Administrativa</h1>
-        <br>
-        <div id="conteudoPrincipal">
-            <!--conteudoPrincipal-->
-
-            <div id="switchbar">
-                <form role="form" id="switchbarfilho">
-                    <h3 style="padding-left: 345px">Escolha o departamento</h3>
-                    <div class="row">
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-cerise">
-                                <label for="switch-6-1">Compras</label>
-                                <input class="switch-input" type="radio" value="green" name="user-color-preference" id="switch-6-1" />
-                                <label onclick="mostrar1()" class="switch-button" for="switch-6-1">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-2">Financeiro</label>
-                                <input class="switch-input" type="radio" value="yellow" name="user-color-preference" id="switch-6-2" />
-                                <label onclick="mostrar2()" class="switch-button" for="switch-6-2">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-3">Contabil</label>
-                                <input class="switch-input" type="radio" value="blue" name="user-color-preference" id="switch-6-3" />
-                                <label onclick="mostrar3()" class="switch-button" for="switch-6-3">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-4">RH</label>
-                                <input class="switch-input" type="radio" value="black" name="user-color-preference" id="switch-6-4" />
-                                <label onclick="mostrar4()" class="switch-button" for="switch-6-4">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-5">Prestação</label>
-                                <input class="switch-input" type="radio" value="white" name="user-color-preference" id="switch-6-5" />
-                                <label onclick="mostrar5()" class="switch-button" for="switch-6-5">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-6">Captação</label>
-                                <input class="switch-input" type="radio" value="white" name="user-color-preference" id="switch-6-6" />
-                                <label onclick="mostrar6()" class="switch-button" for="switch-6-6">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-7">Externos</label>
-                                <input class="switch-input" type="radio" value="white" name="user-color-preference" id="switch-6-7" />
-                                <label onclick="mostrar7()" class="switch-button" for="switch-6-7">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-8">T.I</label>
-                                <input class="switch-input" type="radio" value="white" name="user-color-preference" id="switch-6-8" />
-                                <label onclick="mostrar8()" class="switch-button" for="switch-6-8">Toggle</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-1">
-                            <div class="switch switch-primary">
-                                <label for="switch-6-9">Administrativo</label>
-                                <input class="switch-input" type="radio" value="white" name="user-color-preference" id="switch-6-9" />
-                                <label onclick="mostrar9()" class="switch-button" for="switch-6-9">Toggle</label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-
-            </div>
-            <hr>
-            <div id="esquerda" class="col-xs-6">
-                <h2 class="sub-header"></h2>
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Almoxarifado</td>
-                                <td>237</td>
-                            </tr>
-                            <tr>
-                                <td>Arquitetura / Engenharia</td>
-                                <td>217</td>
-                            </tr>
-                            <tr>
-                                <td>Assessoria - Viviana</td>
-                                <td>205</td>
-                            </tr>
-                            <tr>
-                                <td>Captação de recursos 1</td>
-                                <td>240</td>
-                            </tr>
-                            <tr>
-                                <td>Captação de recursos 2</td>
-                                <td>213</td>
-                            </tr>
-                            <tr>
-                                <td>Captação de recursos - Anderson</td>
-                                <td>254</td>
-                            </tr>
-                            <tr>
-                                <td>Casa do Frei</td>
-                                <td>212</td>
-                            </tr>
-                            <tr>
-                                <td>Compras – Ghabriel</td>
-                                <td>216</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 1</td>
-                                <td>218</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 2</td>
-                                <td>202</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 3</td>
-                                <td>215</td>
-                            </tr>
-                            <tr>
-                                <td>Contabilidade – Thiago</td>
-                                <td>209</td>
-                            </tr>
-                            <tr>
-                                <td>Contabilidade</td>
-                                <td>208</td>
-                            </tr>
-                            <tr>
-                                <td>Contratos / Protocolos</td>
-                                <td>221</td>
-                            </tr>
-                            <tr>
-                                <td>Convênios – Carol</td>
-                                <td>223</td>
-                            </tr>
-                            <tr>
-                                <td>Confecção</td>
-                                <td>227</td>
-                            </tr>
-                            <tr>
-                                <td>Cozinha</td>
-                                <td>214</td>
-                            </tr>
-                            <tr>
-                                <td>Deco / Marlon Carrasco</td>
-                                <td>232</td>
-                            </tr>
-                            <tr>
-                                <td>Departamento pessoal – Pedro</td>
-                                <td>211</td>
-                            </tr>
-                            <tr>
-                                <td>Departamento pessoal</td>
-                                <td>225</td>
-                            </tr>
-                            <tr>
-                                <td>Dr. Guilherme</td>
-                                <td>241</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro – Edmilson</td>
-                                <td>222</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro – Fernando/Ricardo</td>
-                                <td>219</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro 1</td>
-                                <td>203</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro 2</td>
-                                <td>238</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="direita" class="col-xs-6">
-                <h2 class="sub-header"></h2>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Fraternidade</td>
-                                <td>236</td>
-                            </tr>
-                            <tr>
-                                <td>Frei Francisco</td>
-                                <td>234</td>
-                            </tr>
-                            <tr>
-                                <td>Gráfica</td>
-                                <td>226</td>
-                            </tr>
-                            <tr>
-                                <td>Irma Clara</td>
-                                <td>228</td>
-                            </tr>
-                            <tr>
-                                <td>Jurídico</td>
-                                <td>210</td>
-                            </tr>
-                            <tr>
-                                <td>Marcenaria</td>
-                                <td>235</td>
-                            </tr>
-                            <tr>
-                                <td>Nílson</td>
-                                <td>220</td>
-                            </tr>
-                            <tr>
-                                <td>Prestação de contas 1</td>
-                                <td>243</td>
-                            </tr>
-                            <tr>
-                                <td>Prestação de contas 2</td>
-                                <td>239</td>
-                            </tr>
-                            <tr>
-                                <td>Prestação de contas 3</td>
-                                <td>251</td>
-                            </tr>
-                            <tr>
-                                <td>Recepção 1</td>
-                                <td>9</td>
-                            </tr>
-                            <tr>
-                                <td>Recepção 2</td>
-                                <td>200</td>
-                            </tr>
-                            <tr>
-                                <td>Reginaldo / Controladoria</td>
-                                <td>201</td>
-                            </tr>
-                            <tr>
-                                <td>Rouparia</td>
-                                <td>204</td>
-                            </tr>
-                            <tr>
-                                <td>Frei Paulo</td>
-                                <td>230</td>
-                            </tr>
-                            <tr>
-                                <td>Sala de atendimento 1</td>
-                                <td>231</td>
-                            </tr>
-                            <tr>
-                                <td>Sala de atendimento 2</td>
-                                <td>206</td>
-                            </tr>
-                            <tr>
-                                <td>Sala de reunião</td>
-                                <td>233</td>
-                            </tr>
-                            <tr>
-                                <td>Serralheria</td>
-                                <td>224</td>
-                            </tr>
-                            <tr>
-                                <td>SESMT</td>
-                                <td>252</td>
-                            </tr>
-                            <tr>
-                                <td>Tem de tudo – Renata</td>
-                                <td>250</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Infraestrutura - Daniel</td>
-                                <td>247</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Infrastrutura - Luiz Eduardo</td>
-                                <td>248</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Sistemas - Caire/Luiz Caiel</td>
-                                <td>249</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Sistemas - Caire/Fabio</td>
-                                <td>229</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div id="div01">
-                <!--COMPRAS-->
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Compras – Ghabriel</td>
-                                <td>216</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 1</td>
-                                <td>218</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 2</td>
-                                <td>202</td>
-                            </tr>
-                            <tr>
-                                <td>Compras 3</td>
-                                <td>215</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-            <div id="div02">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Financeiro – Edmilson</td>
-                                <td>222</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro – Fernando/Ricardo</td>
-                                <td>219</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro 1</td>
-                                <td>203</td>
-                            </tr>
-                            <tr>
-                                <td>Financeiro 2</td>
-                                <td>238</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="div03">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Contabilidade – Thiago</td>
-                                <td>209</td>
-                            </tr>
-                            <tr>
-                                <td>Contabilidade</td>
-                                <td>208</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="div04">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Departamento pessoal – Pedro</td>
-                                <td>211</td>
-                            </tr>
-                            <tr>
-                                <td>Departamento pessoal</td>
-                                <td>225</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="div05">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Prestação de contas 1</td>
-                                <td>243</td>
-                            </tr>
-                            <tr>
-                                <td>Prestação de contas 2</td>
-                                <td>239</td>
-                            </tr>
-                            <tr>
-                                <td>Prestação de contas 3</td>
-                                <td>251</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="div06" style="display: none;">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Captação de recursos 1</td>
-                                <td>240</td>
-                            </tr>
-                            <tr>
-                                <td>Captação de recursos 2</td>
-                                <td>213</td>
-                            </tr>
-                            <tr>
-                                <td>Captação de recursos - Anderson</td>
-                                <td>254</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div id="div07" style="display: none;">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Confecção</td>
-                                <td>227</td>
-                            </tr>
-                            <tr>
-                                <td>Cozinha</td>
-                                <td>214</td>
-                            </tr>
-                            <tr>
-                                <td>Grafica</td>
-                                <td>226</td>
-                            </tr>
-                            <tr>
-                                <td>Marcenaria</td>
-                                <td>235</td>
-                            </tr>
-                            <tr>
-                                <td>Rouparia</td>
-                                <td>204</td>
-                            </tr>
-                            <tr>
-                                <td>Serralheria</td>
-                                <td>224</td>
-                            </tr>
-                            <tr>
-                                <td>Tem de tudo – Renata </td>
-                                <td>250</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <br>
-            <div id="div08" style="display: none;">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>T.i Infraestrutura - Daniel</td>
-                                <td>247</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Infrastrutura - Luiz Eduardo</td>
-                                <td>248</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Sistemas - Caire/Luiz Caiel</td>
-                                <td>249</td>
-                            </tr>
-                            <tr>
-                                <td>T.i Sistemas - Fabio/Caire</td>
-                                <td>229</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <br>
-            <div id="div09" style="display: none;">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Assessoria - Viviana </th>
-                                <th>205</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>Contratos / Protocolos </td>
-                            <td>221</td>
-                        </tr>
-                        <tr>
-                            <td>Convênios – Carol </td>
-                            <td>223</td>
-                        </tr>
-                        <tr>
-                            <td>Deco / Marlon Carrasco </td>
-                            <td>232</td>
-                        </tr>
-                        <tr>
-                            <td>Dr. Guilherme </td>
-                            <td>241</td>
-                        </tr>
-                        <tr>
-                            <td>Frei Francisco </td>
-                            <td>234</td>
-                        </tr>
-                        <tr>
-                            <td>Jurídico</td>
-                            <td>210</td>
-                        </tr>
-                        <tr>
-                            <td>Nílson</td>
-                            <td>220</td>
-                        </tr>
-                        <tr>
-                            <td>Reginaldo / Controladoria </td>
-                            <td>201</td>
-                        </tr>
-                        <tr>
-                            <td>Frei Paulo </td>
-                            <td>230</td>
-                        </tr>
-
-                        <tbody>
-                    </table>
-                </div>
-            </div>
-            <br>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
         </div>
-        <!--conteudo-principal-->
+      </div>
 
-        <div id="conteudoManuais" style="display: none;">
-            <!--segundo conteudo-->
-            <div class="panel-group collapse-orange" id="accordion-variant-colors">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="collapse-icon up" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseOne-variant">
-                                <p>1 - Manual Módulo Compras - Gerar pedido</p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne-variant" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                            <a align="center" class="btn btn-primary" role="button" href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDMmdmVyPTEwMDAmZmlsZT0xKy0rTWFudWFsK00lQzMlQjNkdWxvK0NvbXByYXMrLStHZXJhcitwZWRpZG8uZG9jeCZjcmM9MTQyMzk0MzE2NSZzaXplPTIuOTYyMzI0JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
-                                download="proposed_file_name">Download</a>
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                <p>2 - Manual Fluig</p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo-variant" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <a class="btn btn-info" role="button" href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDImdmVyPTEwMDAmZmlsZT0yKy0rTWFudWFsK0ZsdWlnLmRvY3gmY3JjPTI0MjAwNjM1NjEmc2l6ZT0xLjM5MTI4MiZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.docx"
-                                download="proposed_file_name">Download</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseThree-variant">
-                                <p>3 - Manual de Cadastro de Fornecedor</p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree-variant" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <a class="btn btn-info" role="button" href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDQmdmVyPTEwMDAmZmlsZT00Ky0rQ2FkYXN0cm8rZGUrcHJvZHV0by5kb2N4JmNyYz0xNDI3MDc0MzA0JnNpemU9MC43OTgxMzkmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.docx"
-                                download="proposed_file_name">Download</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                <p>4 - Cadastro de produto</p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo-variant" class="panel-collapse collapse">
-                        <div class="panel-body">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                <p>5 - Manual Relatório de solicitação de compra</p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo-variant" class="panel-collapse collapse">
-                        <div class="panel-body">
-
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                    <p>6 - Manual Relatório Sintético</p>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo-variant" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                    <p>7 - Manual de eliminação de resíduo</p>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo-variant" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                    <p>8 - Manual de Importação dos pedidos de compra</p>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo-variant" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                    <p>9 - Manual Exportação Bionexo</p>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo-variant" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="collapse-icon" data-toggle="collapse" data-parent="#accordion-variant-colors" href="#collapseTwo-variant">
-                                    <p>10 - Manual Módulo Compras - Solicitação e Relatórios</p>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo-variant" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--fim da div dos manuais-->
+      <h2>Section title</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>sit</td>
+            </tr>
+            <tr>
+              <td>1,002</td>
+              <td>amet</td>
+              <td>consectetur</td>
+              <td>adipiscing</td>
+              <td>elit</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Integer</td>
+              <td>nec</td>
+              <td>odio</td>
+              <td>Praesent</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>libero</td>
+              <td>Sed</td>
+              <td>cursus</td>
+              <td>ante</td>
+            </tr>
+            <tr>
+              <td>1,004</td>
+              <td>dapibus</td>
+              <td>diam</td>
+              <td>Sed</td>
+              <td>nisi</td>
+            </tr>
+            <tr>
+              <td>1,005</td>
+              <td>Nulla</td>
+              <td>quis</td>
+              <td>sem</td>
+              <td>at</td>
+            </tr>
+            <tr>
+              <td>1,006</td>
+              <td>nibh</td>
+              <td>elementum</td>
+              <td>imperdiet</td>
+              <td>Duis</td>
+            </tr>
+            <tr>
+              <td>1,007</td>
+              <td>sagittis</td>
+              <td>ipsum</td>
+              <td>Praesent</td>
+              <td>mauris</td>
+            </tr>
+            <tr>
+              <td>1,008</td>
+              <td>Fusce</td>
+              <td>nec</td>
+              <td>tellus</td>
+              <td>sed</td>
+            </tr>
+            <tr>
+              <td>1,009</td>
+              <td>augue</td>
+              <td>semper</td>
+              <td>porta</td>
+              <td>Mauris</td>
+            </tr>
+            <tr>
+              <td>1,010</td>
+              <td>massa</td>
+              <td>Vestibulum</td>
+              <td>lacinia</td>
+              <td>arcu</td>
+            </tr>
+            <tr>
+              <td>1,011</td>
+              <td>eget</td>
+              <td>nulla</td>
+              <td>Class</td>
+              <td>aptent</td>
+            </tr>
+            <tr>
+              <td>1,012</td>
+              <td>taciti</td>
+              <td>sociosqu</td>
+              <td>ad</td>
+              <td>litora</td>
+            </tr>
+            <tr>
+              <td>1,013</td>
+              <td>torquent</td>
+              <td>per</td>
+              <td>conubia</td>
+              <td>nostra</td>
+            </tr>
+            <tr>
+              <td>1,014</td>
+              <td>per</td>
+              <td>inceptos</td>
+              <td>himenaeos</td>
+              <td>Curabitur</td>
+            </tr>
+            <tr>
+              <td>1,015</td>
+              <td>sodales</td>
+              <td>ligula</td>
+              <td>in</td>
+              <td>libero</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
 
 
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-        <!-- Modal -->
-        <div style="display: none" class="modal right fade" id="divModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                            Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- modal -->
-
-
-
-
-
-
-        <script>
-            //setTimeout(function() { alert("Sempre Verificar se seu chamado no GLPI já foi Finalizado"); }, 3000);
-            function mostrar1() {
-                $("#esquerda, #direita,  #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
-                $("#div01").show(900);
-            };
-
-            function mostrar2() {
-                $("#esquerda, #direita, #div01,  #div03, #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
-                $("#div02").show(900);
-            };
-
-            function mostrar3() {
-                $("#esquerda, #direita, #div01, #div02,  #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
-                $("#div03").show();
-            };
-
-            function mostrar4() {
-                $("#esquerda, #direita, #div01, #div02, #div03,  #div05, #div06, #div07, #div08, #div09").hide(900);
-                $("#div04").show();
-            };
-
-            function mostrar5() {
-                $("#esquerda, #direita, #div01, #div02, #div03, #div04,  #div06, #div07, #div08, #div09").hide(900);
-                $("#div05").show();
-            };
-
-            function mostrar6() {
-                $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05,  #div07, #div08, #div09").hide(900);
-                $("#div06").show();
-            };
-
-            function mostrar7() {
-                $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06,  #div08, #div09").hide(900);
-                $("#div07").show();
-            };
-
-            function mostrar8() {
-                $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06, #div07,  #div09").hide(900);
-                $("#div08").show();
-            };
-
-            function mostrar9() {
-                $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08").hide(900);
-                $("#div09").show();
-            };
-
-            function mostrar10() {
-                $("#div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
-                $("#esquerda, #direita").show(2000);
-            };
-
-            function abrirManual() {
-                $("#conteudoPrincipal").hide(300);
-                $("#conteudoManuais").show(900);
-            };
-
-            function myFunction() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-            };
-        </script>
-
-        <hr>
-        <h4 align="center">Desenvolvido com ❤️ Pela <a href="http://www.franciscanosnaprovidencia.org.br/">Associação Lar são Francisco na Providencia de Deus</a></h4>
-        <p align="center"><a href="https://github.com/fhfavaretto">Fabio Favaretto - TI Sede Administrativa Jaci - SP</a></p>
-</body>
-
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+  </body>
 </html>
