@@ -1,0 +1,2506 @@
+<html>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="http://172.16.0.10:8080/style-guide/css/fluig-style-guide.min.css">
+   <script src="http://172.16.0.10:8080/portal/resources/js/jquery/jquery.js"></script>
+   <script src="http://172.16.0.10:8080/portal/resources/js/jquery/jquery-ui.min.js"></script>
+   <script src="http://172.16.0.10:8080/portal/resources/js/mustache/mustache-min.js"></script>
+   <script src="http://172.16.0.10:8080/style-guide/js/fluig-style-guide.min.js"></script>
+   <link rel="stylesheet" href="./styles.css">
+   <meta charset="UTF-8">
+   <style>
+      * {
+         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+         font-weight: 100;
+
+      }
+
+      h1 {
+         font-size: 65px;
+         text-align: center;
+      }
+
+      #direita {
+
+         padding: 2rem;
+
+      }
+
+      #esquerda {
+         padding: 2rem;
+
+
+      }
+
+      nav {
+         font-size: larger;
+         align-items: center;
+      }
+     
+
+   </style>
+</head>
+
+<body>
+
+   <div class="fluig-style-guide">
+      <nav class="navbar">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="https://applarvercel-fhfavaretto.vercel.app/">Associação Lar São
+                  Francisco</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li><a href="http://172.16.0.11:2368/">FAQ</a></li>
+               <li><a href="http://monitoramento.alsf.local/" target="blank">Zabbix</a></li>
+               <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">GLPI<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="http://172.16.0.5/front/ticket.form.php">abrir chamado</a></li>
+                     <li><a href="http://172.16.0.5/front/central.php">Menu</a></li>
+                     <li><a href="http://172.16.0.5/plugins/dashboard/front/index1.php">Dashboard de chamados</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">E-mail<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="https://outlook.office.com/mail/inbox" target="blank">Caixa de entrada</a></li>
+                     <li><a href="https://outlook.office.com/calendar/view/month">Calendario</a></li>
+                     <li><a href="https://to-do.office.com/tasks/myday">Tarefas - To Do</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rocket.chat<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="https://alsf.rocket.chat/home" target="blank">Web</a></li>
+                     <li><a
+                           href="https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/3.0.6/rocketchat-setup-3.0.6.exe?gclid=undefined">Desktop</a>
+                     </li>
+                  </ul>
+               <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">TOTVS<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="https://codeanalysis.totvs.com.br/codeanalysis/sonarqube/projects" target="blank">Code
+                           Analysis</a></li>
+                     <li><a href="http://172.16.0.2:83/">Protheus Web</a></li>
+                     <li><a href="http://172.16.0.2:84/">Protheus - Web (Homologação)</a></li>
+                     <li><a href="https://totvscst.zendesk.com/hc/pt-br/#home">Central Totvs</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fluig<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="http://172.16.0.10:8080/portal/p/01/home" target="blank">Fluig-Oficial</a></li>
+                     <li><a href="http://172.16.0.11:8080/portal/home">Fluig (Homologação)</a></li>
+                     <li><a href="https://suporte.totvs.com/portal/p/10098/suporte-fluig-home">Central Fluig</a></li>
+                  </ul>
+               </li>
+               <!-- <li><a data-toggle="modal" data-target="#divModal">Manuais</a></li>-->
+               <li><a href="http://www.transparencia-alsf.org.br/" target="blank">Portal Transparência</a></li>
+               <li><a href="http://172.16.0.11:3100/" target="blank">Comprimir-PDF</a></li>
+               <li><a href="https://www.google.com/search?q=associa%C3%A7%C3%A3o+lar+sao+francisco+na+providencia+de+deus+noticias&client=safari&sxsrf=ALeKk00Bo9nZ4YBfBSaTc6vXrP2v8GLdOg:1615205556608&source=lnms&tbm=nws&sa=X&ved=2ahUKEwiZ78LL1aDvAhVEHbkGHQ_TC64Q_AUoAXoECAcQAw&biw=1429&bih=710" target="blank">Noticias 📰</a></li>
+
+
+            </ul>
+         </div>
+      </nav>
+      <!-- <div id="cont_87aa08565fd79f22359b912423a98537"><script type="text/javascript" async src="https://www.tempo.com/wid_loader/87aa08565fd79f22359b912423a98537"></script></div> -->
+      <!--previsao do tempo de jaci assincrono<div não ajustada>-->
+      <br>
+      <h1 id="h1-ramais" style="font-size: 40px;">Lista de Ramais – Sede Administrativa</h1>
+      <h1 id="h1-cnpjs" style="font-size: 40px; display: none; color: #5bc0de;">Lista de CNPJs</h1>
+      <h1 id="h1-apoiadas" style="font-size: 40px; display: none; color: green;">Controladas e Apoiadas</h1>
+
+
+      <p></p>
+      <br>
+
+      <div id="button-show-cnpjs" align="center" style="margin: 5px"> 
+            <button type="button" class="btn btn-success" onclick="cnpjs()">CNPJS</button>
+         </div>
+         <div id="botao-cnpj" align="center" style="margin: 5px; display: none;"> 
+            <button type="button" class="btn btn-success" onclick="apoiadas()">Apoiadas</button>
+            <button type="button" class="btn btn-danger" onclick="cnpjs()">Todos</button>
+            <button type="button" class="btn btn-info" onclick="mostrar10()">Ramais</button>
+            
+         </div>
+
+      <div id="botao-ramais" align="center" style="margin: 5px"> 
+         <button type="button" class="btn btn-default" onclick="mostrar1()">Compras</button>
+         <button type="button" class="btn btn-default" onclick="mostrar2()">Financeiro</button>
+         <button type="button" class="btn btn-default" onclick="mostrar3()">Contabilidade</button>
+         <button type="button" class="btn btn-default" onclick="mostrar4()">RH</button>
+         <button type="button" class="btn btn-default" onclick="mostrar5()">Prestação de contas</button>
+         <button type="button" class="btn btn-default" onclick="mostrar6()">Captação</button>
+         <button type="button" class="btn btn-default" onclick="mostrar7()">Externos</button>
+         <button type="button" class="btn btn-default" onclick="mostrar8()">T.I</button>
+         <button type="button" class="btn btn-default" onclick="mostrar9()">Administrativo</button>
+         <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="mostrar10()">todos</button>
+         </div>
+
+         
+
+      </div>
+      <br>
+      <div id="esquerda" class="col-xs-6">
+         <h2 class="sub-header"></h2>
+         <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+               <thead>
+                  <tr>
+
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="col-md-1">Almoxarifado</td>
+                     <td class="col-md-2">237</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Arquitetura / Engenharia</td>
+                     <td class="col-md-2">217</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Assessoria - Viviana</td>
+                     <td class="col-md-2">205</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Captação de recursos 1 - Vinicius</td>
+                     <td class="col-md-2">240</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Captação de recursos 2 - Renan/Emerson</td>
+                     <td class="col-md-2">213</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Casa do Frei</td>
+                     <td class="col-md-2">212</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Compras – Nayara</td>
+                     <td class="col-md-2">216</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Compras 1</td>
+                     <td class="col-md-2">218</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Compras 2</td>
+                     <td class="col-md-2">202</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Compras 3</td>
+                     <td class="col-md-2">215</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Controladoria</td>
+                     <td class="col-md-2">255</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Contabilidade – Thiago</td>
+                     <td class="col-md-2">209</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Contabilidade</td>
+                     <td class="col-md-2">208</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Contratos / Protocolos</td>
+                     <td class="col-md-2">221</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Convênios – Carol</td>
+                     <td class="col-md-2">223</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Confecção</td>
+                     <td class="col-md-2">227</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Cozinha</td>
+                     <td class="col-md-2">214</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Deco</td>
+                     <td class="col-md-2">232</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Departamento pessoal – Pedro</td>
+                     <td class="col-md-2">211</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Departamento pessoal</td>
+                     <td class="col-md-2">225</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Dr. Guilherme</td>
+                     <td class="col-md-2">241</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Financeiro – Edmilson</td>
+                     <td class="col-md-2">222</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Financeiro – Fernando/Ricardo</td>
+                     <td class="col-md-2">219</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Financeiro 1</td>
+                     <td class="col-md-2">203</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Financeiro 2</td>
+                     <td class="col-md-2">238</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div id="direita" class="col-xs-6">
+         <h2 class="sub-header"></h2>
+         <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+               <thead>
+                  <tr>
+
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="col-md-1">Fraternidade</td>
+                     <td class="col-md-2">236</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Frei Francisco</td>
+                     <td class="col-md-2">234</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Gráfica</td>
+                     <td class="col-md-2">226</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Irma Clara</td>
+                     <td class="col-md-2">228</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Jurídico</td>
+                     <td class="col-md-2">210</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Marcenaria</td>
+                     <td class="col-md-2">235</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Marlon Carrasco</td>
+                     <td class="col-md-2">245</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Nílson</td>
+                     <td class="col-md-2">220</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Prestação de contas 1</td>
+                     <td class="col-md-2">243</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Prestação de contas 2</td>
+                     <td class="col-md-2">239</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Prestação de contas 3</td>
+                     <td class="col-md-2">251</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Recepção 1</td>
+                     <td class="col-md-2">9</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Recepção 2</td>
+                     <td class="col-md-2">200</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Reginaldo</td>
+                     <td class="col-md-2">201</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Rouparia</td>
+                     <td class="col-md-2">204</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Anderson - Assessoria/Barco</td>
+                     <td class="col-md-2">230</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Sala de atendimento 1</td>
+                     <td class="col-md-2">231</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Sala de atendimento 2</td>
+                     <td class="col-md-2">206</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Sala de reunião</td>
+                     <td class="col-md-2">233</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Serralheria</td>
+                     <td class="col-md-2">224</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">SESMT</td>
+                     <td class="col-md-2">252</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Tem de tudo</td>
+                     <td class="col-md-2">250</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">T.i Infraestrutura - Daniel/kaique</td>
+                     <td class="col-md-2">247</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">T.i Infrastrutura - Luiz Eduardo</td>
+                     <td class="col-md-2">248</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">T.i Wareline -Wilson /Luiz Caiel</td>
+                     <td class="col-md-2">229</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">T.i TOTVS-Fluig - Cairê/Fabio</td>
+                     <td class="col-md-2">249</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div id="div01" style="display: none">
+         <!--COMPRAS-->
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Setor de compras | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Compras – Nayara</td>
+                        <td class="col-md-2">216</td>
+                        <td class="col-md-2">compras@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Compras 1</td>
+                        <td class="col-md-2">218</td>
+                        <td class="col-md-2">compras1@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Compras 2</td>
+                        <td class="col-md-2">202</td>
+                        <td class="col-md-2">compras2@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Compras 3</td>
+                        <td class="col-md-2">215</td>
+                        <td class="col-md-2">compras3@alsf.org.br</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div02" style="display: none">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Setor Financeiro | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Financeiro – Edmilson</td>
+                        <td class="col-md-2">222</td>
+                        <td class="col-md-2">Financeiro@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Financeiro – Fernando/Ricardo</td>
+                        <td class="col-md-2">219</td>
+                        <td class="col-md-2">cobranca@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Financeiro 1</td>
+                        <td class="col-md-2">203</td>
+                        <td class="col-md-2"></td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Financeiro 2</td>
+                        <td class="col-md-2">238</td>
+                        <td class="col-md-2"></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div03" style="display: none">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Setor Contabil | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Contabilidade – Thiago</td>
+                        <td class="col-md-2">209</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Contabilidade</td>
+                        <td class="col-md-2">208</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div04" style="display: none">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Departamento Pessoal | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Departamento pessoal – Pedro</td>
+                        <td class="col-md-2">211</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Departamento pessoal</td>
+                        <td class="col-md-2">225</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div05" style="display: none">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Prestação de Contas | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Prestação de contas 1</td>
+                        <td class="col-md-2">243</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Prestação de contas 2</td>
+                        <td class="col-md-2">239</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Prestação de contas 3</td>
+                        <td class="col-md-2">251</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div06" style="display: none;">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Captação de recursos | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Captação de recursos 1 - Vinicius</td>
+                        <td class="col-md-2">240</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Captação de recursos 2 Renan/Emerson</td>
+                        <td class="col-md-2">213</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div id="div07" style="display: none;">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Setores Externos</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">Confecção</td>
+                        <td class="col-md-2">227</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Cozinha</td>
+                        <td class="col-md-2">214</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Grafica</td>
+                        <td class="col-md-2">226</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Marcenaria</td>
+                        <td class="col-md-2">235</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Rouparia</td>
+                        <td class="col-md-2">204</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Serralheria</td>
+                        <td class="col-md-2">224</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">Tem de tudo </td>
+                        <td class="col-md-2">250</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+      <br>
+      <div id="div08" style="display: none;">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Setores de Tecnologia | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="col-md-1">T.i Infraestrutura - Daniel/Kaique</td>
+                        <td class="col-md-2">247</td>
+                        <td class="col-md-2">ti1@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">T.i Infrastrutura - Luiz Eduardo</td>
+                        <td class="col-md-2">248</td>
+                        <td class="col-md-2">ti1@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">T.i Wareline - Wilson/Luiz Caiel</td>
+                        <td class="col-md-2">229</td>
+                        <td class="col-md-2">ti3@alsf.org.br</td>
+                     </tr>
+                     <tr>
+                        <td class="col-md-1">T.i TOTVS-Fluig Sistemas - Cairê/Fabio</td>
+                        <td class="col-md-2">249</td>
+                        <td class="col-md-2">ti2@alsf.org.br</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <br>
+      <div id="div09" style="display: none;">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4> Diretoria | Sede Administrativa</h4>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-striped table-bordered">
+                  <thead>
+                     <tr>
+                        <th class="col-md-1">Assessoria - Viviana </th>
+                        <th class="col-md-2">205</th>
+                        <td class="col-md-2"></td>
+                     </tr>
+                  </thead>
+                  <tr>
+                     <td class="col-md-1">Contratos / Protocolos </td>
+                     <td class="col-md-2">221</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Convênios – Carol </td>
+                     <td class="col-md-2">223</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Deco</td>
+                     <td class="col-md-2">232</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Marlon Carrasco</td>
+                     <td class="col-md-2">245</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Dr. Guilherme </td>
+                     <td class="col-md-2">241</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Frei Francisco </td>
+                     <td class="col-md-2">234</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Jurídico</td>
+                     <td class="col-md-2">210</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Nílson</td>
+                     <td class="col-md-2">220</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Reginaldo</td>
+                     <td class="col-md-2">201</td>
+                     <td class="col-md-2">reginaldo@alsf.org.br</td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Controladoria</td>
+                     <td class="col-md-2">255</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tr>
+                     <td class="col-md-1">Anderson - Assessoria/Barco</td>
+                     <td class="col-md-2">230</td>
+                     <td class="col-md-2"></td>
+                  </tr>
+                  <tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+      <div id="esquerda-cnpjs" class="col-xs-6" style="display: none">
+        <h2 class="sub-header"></h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3"> 
+                  Final 0001-40
+                  <br>
+                  Matriz
+                  <br>
+                  Jaci
+                </td>
+                <td class="col-md-6" >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0001-40   –   Insc. Estadual: 393.001.050.116<br>
+                  <hr>
+                  Rodovia Vicinal João Joaquim Telles Filho, Km 03 - Zona Rural<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 - 9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml0140@alsf.org.br - Insc. Municipal: 1060-00/00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0002-21
+                  <br>
+                  Hospital Jaci
+                  <br>
+                  Hospita-Lar Santa Catarina
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0002-21   –   Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Maria Joana  do Amaral Mendonça, 950 – Centro<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 - 9090<br>
+                  <hr>
+                  Email envio arquivo XML: xml0221@alsf.org.br - Insc. Municipal: 1060-01/00<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0004-93
+                  <br>
+                  Lar Dom Bosco
+                  <br>
+                  Pirajuí
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0004-93  -  Insc. Estadual: 538.013.726.112<br>
+                  <hr>
+                  Av. Nova Pirajuí, S/Nº - Vila Abel<br>
+                  <hr>
+                  CEP: 16.605.056  -  Pirajuí - SP  -  Fone: (14) 3572 - 1253<br>
+                  <hr>
+                  Email envio arquivo XML: xml0493@alsf.org.br - Ins. Municipal: 5323<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0006-55
+                  <br>
+                  Lar Santa Clara
+                  <br>
+                  Jaci
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0006-55  -  Insc. Estadual: 393.001.965.118<br>
+                  <hr>
+                  R do Progresso, 900 – Res. Elvio Caneira<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283-9090<br>
+                  <hr>
+                  Email envio arquivo XML: xml0655@alsf.org.br - Insc. Municipal: 1060-02/00<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0007-36
+                  <br>
+                  Casa Bom Pastor na Providencia de Deus
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ – 53.221.255/0007-36 – Insc. Estadual: 393.001.947-116<br>
+                  <hr>
+                  Est. Vic. Genesio R dos Santos KM 03, S/N – Rural<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 – 9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml0736@alsf.org.br - Insc. Municipal:<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0008-17
+                  <br>
+                  Lar Sagr C. de Jesus
+                  <br>
+                  Jaci
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0008-17  -  Insc. Estadual: 393.001.938.115<br>
+                  <hr>
+                  Estrada Vicinal Genesio Rodrigues dos Santos, Km6 - S/N° -  Zona Rural<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3813 – 7397<br>
+                  <hr>
+                  Email envio arquivo XML: xml0817@alsf.org.br - Insc. Municipal: 1060-07/00<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0010-31
+                  <br>
+                  Lar Bom Samaritano
+                  <br>
+                  Lins
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0010-31  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  R. Coronel José Braulio Junqueira de Andrade, 350 – Jardim Linense<br>
+                  <hr>
+                  CEP: 16.401-140  -  Lins  -  Fone (14) 3522 - 1699 <br>
+                  <hr>
+                  Email envio arquivo XML: "xml1031@alsf.org.br- Insc. Municipal:112831<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0012-01
+                  <br>
+                  Lar Irmã Dulce
+                  <br>
+                  Pirajuí
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0012-01  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Voluntário Silvano de Lima, 1035 – Vila Ortiz<br>
+                  <hr>
+                  CEP: 16.600-232  -  Pirajuí - SP  -  Fone: (14) 3584-4846<br>
+                  <hr>
+                  Email envio arquivo XML: xml1201@alsf.org.br - Insc. Municipal: 5324<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0013-84
+                  <br>
+                  Lar Recanto Sagrado 
+                  Coração de Jesus
+                  <br>
+                  Jaci
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0013-84  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Projetada 2 - S/N° -  Jardim Nova Jaci<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283-1122<br>
+                  <hr>
+                  Email envio arquivo XML: xml1384@alsf.org.br - Insc. Municipal: 1060-03/00<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0014-65
+                  <br>
+                  Fazenda Santo Antônio
+                  <br>
+                  Jaci
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0014-65  -  Insc. Estadual: 393.053.120.117<br>
+                  <hr>
+                  Bairro Santo Antônio das Perobas, S/Nº – Rural<br>
+                  <hr>
+                  CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 - 9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml1465@alsf.org.br<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0015-46
+                  <br>
+                  Hospital São Domingos
+                  <br>
+                  Nhandeara
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0015-46  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Av. Pedro Pedrosa, 236 – Jardim Nossa Senhora Aparecida<br>
+                  <hr>
+                  CEP: 15.190-000  -  Nhandeara - SP  -  Fone: (17) 3467 - 4910<br>
+                  <hr>
+                  Email envio arquivo XML: xml1546@alsf.org.br - Insc. Municipal: 200105048<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0016-27
+                  <br>
+                  Lar São Vicente
+                  <br>
+                  Estrela D´Oeste
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0016-27  -  Insc. Estadual: 301.057.588.116<br>
+                  <hr>
+                  Rua Pará, S/Nº - Vila Santa Clara<br>
+                  <hr>
+                  CEP: 15.650-000  -  Estrela D’ Oeste - SP  -  Fone: (17) 3833 - 3481<br>
+                  <hr>
+                  Email envio arquivo XML: xml1627@alsf.org.br - Insc. Municipal: 8730107<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0017-08
+                  <br>
+                  Fazenda A Padroeira
+                  <br>
+                  Pirajá
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0017-08  -  Insc. Estadual: 473.056.418.116<br>
+                  <hr>
+                  Estrada Vicinal Jaci / Pirajá Km 10 - S/N° - Zona Rural<br>
+                  <hr>
+                  CEP: 15.120-000  -  Neves Paulista - SP  -  Fone: (17) 3271 - 1195<br>
+                  <hr>
+                  Email envio arquivo XML: xml1708@alsf.org.br<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0019-70
+                  <br>
+                  Hospital  e Maternidade
+                  <br>
+                  Mirassol
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0019-70  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Rui Barbosa, 2019 – Centro<br>
+                  <hr>
+                  CEP: 15.130-055  -  Mirassol - SP  -  Fone: (17) 3253 - 9830<br>
+                  <hr>
+                  Email envio arquivo XML: xml1970@alsf.org - Insc. Municipal: 13545-0<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0020-03
+                  <br>
+                  Lar Madre Paulina
+                  <br>
+                  Santa Fé do Sul
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0020-03  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua 13 de Maio, 216 - São Francisco<br>
+                  <hr>
+                  CEP: 15.775-000  -  Santa Fé do Sul - SP  -  Fone: (17) 3631 - 3224<br>
+                  <hr>
+                  Email envio arquivo XML: xml2003@alsf.org.br - Insc. Municipal: 8209<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0021-94
+                  <br>
+                  Rest.  Bom Prato
+                  <br>
+                  São José do Rio Preto
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ - 53.221.255/0021-94  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Pedro Amaral, 2919 - Centro<br>
+                  <hr>
+                  CEP: 15.010-010  -  São José do Rio Preto - SP  -  Fone (17) 3214 - 0820 <br>
+                  <hr>
+                  Email envio arquivo XML: xml2194@alsf.org.br - Insc. Municipal: 1395360<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0046-42 
+                  <br>
+                  Cemiterio de São Francisco da Penitencia
+                  <br>
+                  Rio de Janeiro 
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0046-42  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Monsenhor Manoel Gomes, 307 - Caju<br>
+                  <hr>
+                  CEP: 20.931-673  -  Rio de Janeiro - RJ  - <br>
+                  <hr>
+                  <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0047-23
+                  <br>
+                  Hospital São Francisco da Penitencia
+                  <br>
+                  Rio de Janeiro
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0047-23  -  Insc. Municipal : 541.222-6<br>
+                  <hr>
+                  Rua Conde de Bonfim, 1033 - Tijuca<br>
+                  <hr>
+                  CEP: 20.530-001  -  Rio de Janeiro - RJ  -  Fone: (21) 2571-6242<br>
+                  <hr>
+                  Email envio arquivo XML: xml4723@alsf.org.br - Insc. Municipal: 0.541.222-6<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0049-95
+                  <br>
+                  Hospital São Francisco na Prov. de Deus
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0049-95  -  Insc.Estadual: Isento<br>
+                  <hr>
+                  Rua Conde de Bonfim, 1033 - Tijuca<br>
+                  <hr>
+                  CEP: 20.530-001  -  Rio de Janeiro - RJ  -  Fone:  (21) 2571-6242<br>
+                  <hr>
+                  Email envio arquivo XML: xml4995@alsf.org.br - Insc. Municipal: 794538<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0051-00  
+                  <br>
+                  Hospital Universitario São Francisco
+                  <br>
+                  Bragança Paulista
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0051-00 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Av. São Francisco de Assis, 260 – Cidade Universitária<br>
+                  <hr>
+                  CEP: 12.916-542 - Bragança Paulista - SP - Fone: (11) 2490-1130<br>
+                  <hr>
+                  Email envio arquivo XML: xml5100@alsf.org.br - Insc. Municipal: 044248<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0052-90
+                  <br>
+                  Ambulatorio Medico de Especialidades
+                  <br>
+                  AME Atibaia
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0052-90 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Rua Doutor Zeferino Alves do Amaral, 755 – Centro<br>
+                  <hr>
+                  CEP: 12.940-410 - Atibaia - SP - Fone: (11) 4414-1650<br>
+                  <hr>
+                  Email arquivo XML: xml5290@alsf.org.br Insc. Municipal: 00041036<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0053-71
+                  <br>
+                  Hospital Padre Tiago 
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0053-71 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Rua Castro Alves, 686 - Centro<br>
+                  <hr>
+                  CEP: 75.800.021 - Jatai - GO   Fone: (64) 3632-6577<br>
+                  <hr>
+                  Email arquivo XML: xm5371@alsf.org.br - Insc. Municipal: 302960101<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0055-33 
+                  <br>
+                  Nucleo de Produção Santa Terezinha na Prov. De Deus
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0055-33 - Insc.Estadual: 393.009.371.116<br>
+                  <hr>
+                  Est. Vicinal Genesio Rodrigues dos Santos, Km 1, S/N - Zona Rural<br>
+                  <hr>
+                  CEP: 15.155-000 – Jaci-SP Fone: (17)99661-0730<br>
+                  <hr>
+                  Email arquivo XML: xm5533@alsf.org.br <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0057-03
+                  <br>
+                  CAISM - Centro de Atenção Integrada a Saude Mental
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0057-03 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Av. dos Coqueiros, 300  - Centro<br>
+                  <hr>
+                  CEP: 07.850-320 - Franco da Rocha-SP  Fone: (11) 3336-8200<br>
+                  <hr>
+                  Email arq. XML: xml5703@alsf.org.br - Insc. Municipal: 1500316 <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0058-86
+                  <br>
+                  Hospital Estadual de Franco da Rocha
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0058-86 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Av. dos Coqueiros, 300, Bloco: A - Centro<br>
+                  <hr>
+                  CEP: 07.850-901 - Franco da Rocha-SP Fone: (11) 3336-8200<br>
+                  <hr>
+                  Email arq. XML: xml5886@alsf.org.br - Insc. Municipal: 1500315 <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0059-67
+                  <br>
+                  Hospital Nove de Abril na Providencia de Deus
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0059-67 - Insc.Estadual: Isento<br>
+                  <hr>
+                  Rod. PA 257, Esquina com Rua Nova, S/N - Bom Pastor<br>
+                  <hr>
+                  CEP: 68.170-000  - Juruti- PA   Fone: (93) 3536-1038<br>
+                  <hr>
+                  Email arq. XML: xml5967@alsf.org.br - Insc. Municipal: 09116<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0060-09
+                  <br>
+                  Conviver Madre Regina na Providencia de Deus
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ: 53.221.255/0060-09 - Insc.Estadual: Isento<br>
+                  <hr>
+                  R Tenente Marques,131 – Presidente Kennedy<br>
+                  <hr>
+                  CEP: 60.356-150 – Fortaleza – CE (85)3478-2707<br>
+                  <hr>
+                  Email arq. XML: xml6009@alsf.org.br - Insc. Municipal: <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0061-81
+                  <br>
+                  Barco Hospital Papa Francisco
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ – 53.221.255/0061-81  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  R Siqueira Campos, 50 Andar Altos – Centro<br>
+                  <hr>
+                  CEP: 68.250-000 - Óbidos - PA  (17)3283-9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml6181@alsf.org.br - Insc. Municipal:003760<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0062-62
+                  <br>
+                  Casa do Cirineu na Providencia de Deus 
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ – 53.221.255/0062-62  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Natalia Tebar, 505 – São Francisco<br>
+                  <hr>
+                  CEP: 15.086-140 – São José do Rio Preto – SP  (17)3283-9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml6262@alsf.org.br - Insc. Municipal:3576430<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+           <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0066-96
+                  <br>
+                  Lar Dom Getulio na Prov. de Deus 
+                  <br>
+                </td>
+                <td >
+                 ALSF de Assis na Prov. de Deus <br>
+                  <hr>
+                  CNPJ - 53.221.255/0066-96  -  Insc. Estadual:<br>
+                  <hr>
+                  Est. do tigre, S/N, KM 01 CPX 48 – Salto<br>
+                  <hr>
+                  CEP: 86.270-000 - São Jeronimo da Serra - PR (42) 3267-1282<br>
+                  <hr>
+                  <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+           <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-3">
+                  Final 0062-62
+                  <br>
+                  Casa do Cirineu na Providencia de Deus 
+                  <br>
+                </td>
+                <td >
+                  Associação Lar São Francisco de Assis na Providência de Deus<br>
+                  <hr>
+                  CNPJ – 53.221.255/0062-62  -  Insc. Estadual: Isento<br>
+                  <hr>
+                  Rua Natalia Tebar, 505 – São Francisco<br>
+                  <hr>
+                  CEP: 15.086-140 – São José do Rio Preto – SP  (17)3283-9070<br>
+                  <hr>
+                  Email envio arquivo XML: xml6262@alsf.org.br - Insc. Municipal:3576430<br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="direita-cnpjs" class="col-xs-6" style="display: none">
+        <h2 class="sub-header"></h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3"> 
+                      Final 0022-75
+                      <br>
+                      Lar Maria de Nazaré
+                      <br>
+                      Tabapuã
+                    </td>
+                    <td class="col-md-6" >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0022-75 – Insc. Estadual: 673.066.976.116<br>
+                      <hr>
+                      Rodovia Jeronimo Ignacio da Costa Km 1 - Zona Rural<br>
+                      <hr>
+                      CEP: 15.880-000  -  Tabapuã - SP  -  Fone (17) 3562 - 1221<br>
+                      <hr>
+                      Email envio arquivo XML: xml2275@alsf.org.br - Insc. Municipal: 2378
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0023-56                        <br>
+                      Ambulatorio Medico de Especialidades - AME                       <br>
+                      São José do Rio Preto                     
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0023-56 - Insc. Estadual: Isento
+                      <br>
+                      <hr>
+                      Rua Maria Joana  do Amaral Mendonça, 950 – Centro<br>
+                      <hr>
+                      CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 - 9090<br>
+                      <hr>
+                      Email envio arquivo XML: xml0221@alsf.org.br - Insc. Municipal: 1060-01/00<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0025-18
+                      <br>
+                      Lar Santa Maria
+                      <br>
+                      Pirajuí
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0025-18  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua Distrito Federal, 170 - Vila Ortiz<br>
+                      <hr>
+                      CEP: 16.600-240  -  Pirajuí - SP  -  Fone: (14) 3584-4672<br>
+                      <hr>
+                      Email envio arquivo XML: xml2518@alsf.org.br - Insc. Municipal: 6105<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0027-80 
+                      <br>
+                      Núcleo Educacional        Santa Rita de Cassia
+                      <br>
+                      Jaci
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0027-80  Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua Anisio Paracatu de Oliveira, S/N º  - Centro <br>
+                      <hr>
+                      CEP: 15.155-000    Jaci - SP  - Fone (17) 3813 - 7524<br>
+                      <hr>
+                      Email envio arquivo XML: xml2780@alsf.org.br - Insc. Municipal: 1060-04/00<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0028-60<br>
+                      Hospital Estadual Porto Primavera
+                      <br>
+                      Rosana
+                    </td>
+                    <td >
+                        Associação Lar São Francisco de Assis na Providência de Deus  
+                      <br>
+                      <hr>
+                      CNPJ - 53.221.255/0028-60  - Insc. Estadual: Isento
+                      <br>
+                      <hr>
+                      Rua do Hospital, 135,  Primavera
+                      <br>
+                      <hr>
+                      CEP: 19.274-000  - Rosana - SP  -  Fone (18) 3284-9500
+                      <br>
+                      <hr>
+                      Email envio arquivo XML: xml260@alsf.org.br - Insc. Municipal: 00062071-0<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Filial 0029-41 
+                      <br>
+                      Hospita-lar Nossa Senhora das Graças
+                      <br>
+                      São José do Rio Preto
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0029-41  - Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua Candido Carneiro, 663 - Vila Bom Jesus<br>
+                      <hr>
+                      CEP: 15.014-200 - São José do Rio Preto - SP - Fone (17) 3212 - 9064<br>
+                      <hr>
+                      Email envio arquivo XML: xml2941@alsf.org.br - Insc. Municipal: 3053380<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Filial 0030-85     
+                      <br>
+                      Nucleo Educacional Santo Afonso na Providencia de Deus
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0030-85 - Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua Paraná, S/N° Quadra 105 - Primavera<br>
+                      <hr>
+                      CEP: 19.274-000  -  Rosana - SP  -  Fone (18) 3284 - 1783<br>
+                      <hr>
+                      Email envio arquivo XML: xml3085@alsf.org.br - Insc. Municipal: 0062293-0<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Filial 0031-66  
+                      <br>
+                      Hospital Estadual João Paulo II
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0031-66 - Insc. Estadual: Isento<br>
+                      <hr>
+                      Avenida Lino José de Seixas, 1455 - Jardim Fuscaldo <br>
+                      <hr>
+                      CEP: 15.061-275  -  São José do Rio Preto - SP  -  Fone (17) 3202 - 1717<br>
+                      <hr>
+                      Email envio arquivo XML: xml3166@alsf.org.br - Insc. Municipal: 3045490<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0032-47
+                      <br>
+                      Hospital Regional de Presidente Prudente
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0032-47  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua José Bongiovani, 1297 - Cidade Universitária<br>
+                      <hr>
+                      CEP: 19.050-680 - Presidente Prudente - SP - Fone: (18) 3229 - 1500<br>
+                      <hr>
+                      Email envio arquivo XML: xml3247@alsf.org.br - Insc. Municipal: 83004<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0033-28
+                      <br>
+                      mbulatorio Medico de Especialidades - AME  
+                      <br>
+                      Presidente Prudente
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0033-28 -   Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua José Bongiovani , 1297 Bloco VII - Cidade Universitaria<br>
+                      <hr>
+                      CEP: 19.050-680 - Presidente Prudente - SP - Fone: (18) 3918-9850<br>
+                      <hr>
+                      Email envio arquivo XML: xml3328@alsf.org.br - Insc. Municipal: 84332<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0034-09
+                      <br>
+                      Hospital Regional de Ilha Solteira  
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0034-09  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Al Bahia, 618 - Centro<br>
+                      <hr>
+                      CEP: 15.385-000  -  Ilha Solteira - SP  -  Fone: (18) 3743 - 1500<br>
+                      <hr>
+                      Email envio arquivo XML: xml3409@alsf.org.br - Insc. Municipal: 3240<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0035-90
+                      <br>
+                      Casa Abrigo do Hosp Est. João Paulo II
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0035-90  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Avenida das Hortensias, 79 - Jardim dos Seixas<br>
+                      <hr>
+                      CEP: 15.061-080 - São José do Rio Preto - SP (17) 3223 - 0978<br>
+                      <hr>
+                      Email envio arquivo XML: xml3590@alsf.org.br - Insc. Municipal: 3056760<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0039-13
+                      <br>
+                      Lar São Miguel Arcanjo 
+                      <br>
+                      Pirapozinho
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0039-13  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Rua Ivan Jacinto Guimarães, 333 - Jardim Vantini II<br>
+                      <hr>
+                      CEP: 19.200-000 - Pirapozinho - SP (18) 3269-5344<br>
+                      <hr>
+                      Email envio arquivo XML: xml3913@alsf.org.br - Insc. Municipal: 8894-0<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0040-57
+                      <br>
+                      Lar Nossa Senhora do Carmo
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0040-57  -  Insc. Estadual: 162.011.744.111<br>
+                      <hr>
+                      CRG da Paca, s/n - Vila Rural<br>
+                      <hr>
+                      CEP: 19.160-000 - Alvares Machado - SP  (18) 99180-9344<br>
+                      <hr>
+                      Email envio arquivo XML: xml4057@alsf.org.br - Insc. Municipal: 528000-0 <br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0041-38
+                      <br>
+                      Lar Santa Terezinha do Menino Jesus
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0041-38  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      R. Antonio Rodrigues,s/n - Anexo.Est. Raimundo Maiolini Km15 - Montalvão<br>
+                      <hr>
+                      CEP: 19.110-010 - Presidente Prudente - SP (18) 99197-6159<br>
+                      <hr>
+                      Email envio arquivo XML: xml4138@alsf.org.br - Insc. Municipal: 96359<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0063-43
+                      <br>
+                      Lar de Emaus  na Providencia de Deus 
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ – 53.221.255/0063-43  -  Insc. Estadual: Isento<br>
+                      <hr>
+                      Av. das Missões, 18, - Cordovil<br>
+                      <hr>
+                      CEP: 21.010-670 – Rio de Janeiro – RJ (17)3283-9070<br>
+                      <hr>
+                      Email envio arquivo XML: - Insc. Municipal:5324<br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-3">
+                      Final 0064-24
+                      <br>
+                      Nucleo de Produção São Pedro na Providencia de Deus
+                      <br>
+                    </td>
+                    <td >
+                      Associação Lar São Francisco de Assis na Providência de Deus<br>
+                      <hr>
+                      CNPJ - 53.221.255/0064-24  -  Insc. Estadual: 213.020.201-119<br>
+                      <hr>
+                      Est. Bilac ao Corrego Elisio, S/N – Zona Rural<br>
+                      <hr>
+                      CEP: 16.210-000 - Bilac - SP (17)3283-9070<br>
+                      <hr>
+                      Email envio arquivo XML: - Insc. Municipal: <br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+     
+      <br>
+
+      <div id="apoiadas" class="col-xs-6" style="display: none;">
+    <h2 class="sub-header"></h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    19.611.676/0001-40
+                     <br>
+                     Fraternidade São Francisco de Assis na Prov.Deus
+                     <br>
+   
+                     </td>
+                  <td>
+                    Fraternidade São Francisco de Assis na Prov.de Deus<br><hr>
+                    CNPJ: 19.611.676/0001-40 – Insc.Estadual: 393.013.713.117<br><hr>
+                    Rodovia Vicinal João Joaquim Telles Filho, Km 02 - Zona Rural<br><hr>
+                    CEP: 15.155-000  -  Jaci - SP  -  Fone: (17) 3283 - 9070<br><hr>
+                    Insc. Municipal: 1070-00/14<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    19.611.676/0002-20
+                     <br>
+                     Vi-Vendas na Prov.Deus
+                     <br>
+   
+                     </td>
+                  <td >
+                    Fraternidade São Francisco de Assis na Prov.de Deus<br><hr>
+                    CNPJ: 19.611.676/0002-20 – Insc.Estadual: 124.165.599.112<br><hr>
+                    Rua Antonio Fuscaldo, 449, JD Fuscaldo<br><hr>
+                    CEP: 15.061-260  -  São José do Rio Preto - SP  -  Fone: (17) 3283 - 9070<br><hr>
+                    Insc. Municipal:<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    77.329.423/0001-84
+                     <br>
+                     Associação Filantrópica Humanitas
+                     <br>
+   
+                     </td>
+                  <td >
+                    Associação Filantrópica Humanitas<br><hr>
+                    CNPJ: 77.329.423/0001-84 – Insc.Estadual:90762730-62<br><hr>
+                    TV Estrada do Tigre,  S/N  - KM 01 – Salto<br><hr>
+                    CEP: 86.270-000  - São Jeronimo da Serra - PR  Fone: (43)3627-1282<br><hr>
+                    Insc. Municipal: 754<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    05.520.492/0001-60
+                     <br>
+                     Associação Filantrópica Dom Getúlio
+                     <br>
+   
+                     </td>
+                  <td >
+                    Associação Filantrópica Dom Getúlio<br><hr>
+                    CNPJ: 05.520.492/0001-60 - Insc.Estadual: <br><hr>
+                    EST. do Tigre, S/N - KM 01 Compl. CXPST48 – Salto<br><hr>
+                    CEP: 86.270-000 -  São Jeronimo da Serra - PR  -  Fone: (43)3267-1282<br><hr>
+                    Insc. Municipal: 1.497<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    43.667.179/0001-48 
+                     <br>
+                     Santa Casa de Misericordia de Aparecida
+                     <br>
+   
+                     </td>
+                  <td >
+                    Santa Casa de Misericordia de Aparecida<br><hr>
+                    CNPJ:43.667.179/0001-48 - Insc.Estadual; Isento<br><hr>
+                    Rua Barão do Rio Branco, 470<br><hr>
+                    CEP:12.570-000 - Aparecida - SP – Fone: (12)3104-5555<br><hr>
+                    Insc. Municipal: 58631<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    10.217.271/0001-57
+                     <br>
+                     Santa Casa de Mis. De Obidos
+                     <br>
+   
+                     </td>
+                  <td >
+                    Assoc. de Caridade Santa Casa de Mis. De Obidos<br><hr>
+                    CNPJ - 10.217.271/0001-57   –   Insc. Estadual: Isento<br><hr>
+                    TR. Rui Barbosa, n° 331, Centro<br><hr>
+                    CEP: 68.250-000 - Obidos - PA  -  Fone: (93)3547-1417 <br><hr>
+                    Insc. Municipal: 000.621<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    51.660.082/0001-31
+                     <br>
+                      Associação Hospitalar Santa Casa de Lins
+                     <br>
+   
+                     </td>
+                  <td >
+                    Associação Hospitalar Santa Casa de Lins<br><hr>
+                    CNPJ: 51.660.082/0001-31 - Insc.Estadual: Isento<br><hr>
+                    Rua Pedro de Toledo, 486 - Centro<br><hr>
+                    CEP:16.400-105 - Lins - SP - Fone: (14) 3533-2500<br><hr>
+                    Insc. Munic. 31423<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    43.002.005/0001-66 
+                     <br>
+                     Irmandade Santa Casa de Misericordia de Adamantina
+                     <br>
+   
+                     </td>
+                  <td >
+                    Irmandade Santa Casa de Misericordia de Adamantina<br><hr>
+                    CNPJ:43.002.005/0001-66 - Insc.Estadual; Isento<br><hr>
+                    R Joaquim Luiz Vian, 209 – Centro<br><hr>
+                    CEP:17.800-000 – Adamantina - SP – Fone:(18)3502-2200<br><hr>
+                    Insc. Municipal: 500677700<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    79.128.260/0001-05
+                     <br>
+                     Albergue Santa Luiza de Marillac de Maringá
+                     <br>
+   
+                     </td>
+                  <td >
+                    Bispado de Rio Preto<br><hr>
+                                                                                 CNPJ: 45.096.989/0017-84 - Insc.Estadual: Isento<br><hr>
+                                                                                 Pc Matriz, s/n - Centro<br><hr>
+                                                                                 CEP:15.155-000 - Jaci-SP - Fone: (17)3283-9070<br><hr>
+                                                                                 Insc. Municipal:<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+     
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                    34.020.150/0001-89
+                     <br>
+                     ABICS
+                     <br>
+   
+                     </td>
+                  <td >
+                    Assoc. Brasileira de Instituições Catolicas de Saúde<br><hr>
+                    CNPJ: 34.020.150/0001-89 - Insc.Estadual: Isento<br><hr>
+                    Av. Franklin Roosevelt, n° 23, Sala 610 - Centro<br><hr>
+                    CEP:20.021-120 - Rio de Janeiro-RJ - Fone: (17)3283-9070<br><hr>
+                    Insc. Municipal:<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+          <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+   
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="col-md-3">
+                   45.096.989/0017-84
+                     <br>
+                     Paroquia de São Benedito
+                     <br>
+                     Jaci-SP
+                     </td>
+                  <td >
+                    Bispado de Rio Preto<br><hr>
+                    CNPJ: 45.096.989/0017-84 - Insc.Estadual: Isento<br><hr>
+                    Pc Matriz, s/n - Centro<br><hr>
+                    CEP:15.155-000 - Jaci-SP - Fone: (17)3283-9070<br><hr>
+                    Insc. Municipal:<br>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+    </div>
+  </div>
+   </div>
+
+      <br>
+      <!-- Modal -->
+      <div style="display: none; align-content: center;" class="modal fade" id="divModal" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal div-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Manuais Modulo de Compras</h4>
+                  <!--cabeçario do modal-->
+               </div>
+               <div class="modal-body">
+                  <!--corpo do modal-->
+                  <h2>arquivos disponiveis para Download</h2>
+                  <p>1 - Manual Módulo Compras - Gerar pedido</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDMmdmVyPTEwMDAmZmlsZT0xKy0rTWFudWFsK00lQzMlQjNkdWxvK0NvbXByYXMrLStHZXJhcitwZWRpZG8uZG9jeCZjcmM9MTQyMzk0MzE2NSZzaXplPTIuOTYyMzI0JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>2 - Manual Fluig</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDImdmVyPTEwMDAmZmlsZT0yKy0rTWFudWFsK0ZsdWlnLmRvY3gmY3JjPTI0MjAwNjM1NjEmc2l6ZT0xLjM5MTI4MiZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>3 - Manual de Cadastro de Fornecedor</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDEmdmVyPTEwMDAmZmlsZT0zKy0rTWFudWFsK2RlK0NhZGFzdHJvK2RlK0Zvcm5lY2Vkb3IuZG9jeCZjcmM9ODU2NDEzNzk3JnNpemU9MC43MzE1MzUmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>4 - Cadastro de produto</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDQmdmVyPTEwMDAmZmlsZT00Ky0rQ2FkYXN0cm8rZGUrcHJvZHV0by5kb2N4JmNyYz0xNDI3MDc0MzA0JnNpemU9MC43OTgxMzkmdUlkPTExMTU1MSZmU0lkPTU4NTYmdVNJZD01ODU2JmQ9ZmFsc2UmdGtuPSZwdWJsaWNVcmw9dHJ1ZQ==.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>5 - Manual Relatório de solicitação de compra</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDUmdmVyPTEwMDAmZmlsZT01Ky0rTWFudWFsK1JlbGF0JUMzJUIzcmlvK2RlK3NvbGljaXRhJUMzJUE3JUMzJUEzbytkZStjb21wcmEuZG9jeCZjcmM9Mjk0OTQ5NTIwMCZzaXplPTAuNzE0NjU3JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>6 - Manual Relatório Sintético</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDYmdmVyPTEwMDAmZmlsZT02Ky0rTWFudWFsK1JlbGF0JUMzJUIzcmlvK1NpbnQlQzMlQTl0aWNvLmRvY3gmY3JjPTU5OTYzODg4MSZzaXplPTAuOTc4MjcyJnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>7 - Manual de eliminação de resíduo</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDcmdmVyPTEwMDAmZmlsZT03K01hbnVhbCtkZStlbGltaW5hJUMzJUE3JUMzJUEzbytkZStyZXMlQzMlQURkdW8uZG9jeCZjcmM9MTkyMTM3Njc5MCZzaXplPTEuMzQ0Njg0JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>8 - Manual de Importação dos pedidos de compra</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDgmdmVyPTEwMDAmZmlsZT04Ky0rTWFudWFsK2RlK0ltcG9ydGElQzMlQTclQzMlQTNvK2RvcytwZWRpZG9zK2RlK2NvbXByYV8uZG9jeCZjcmM9MzUyOTMyNTEwMyZzaXplPTAuMzYxNDcxJnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>9 - Manual Exportação Bionexo</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NDkmdmVyPTEwMDAmZmlsZT05Ky0rTWFudWFsK0V4cG9ydGElQzMlQTclQzMlQTNvK0Jpb25leG8uLmRvY3gmY3JjPTQ1MTg1NjY4OSZzaXplPTAuNjc0MDI5JnVJZD0xMTE1NTEmZlNJZD01ODU2JnVTSWQ9NTg1NiZkPWZhbHNlJnRrbj0mcHVibGljVXJsPXRydWU=.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+                  <p>10 - Manual Módulo Compras - Solicitação e Relatórios</p>
+                  <a class="btn btn-info" role="button"
+                     href="http://172.16.0.10:8080/volume/stream/Rmx1aWc=/P3Q9MSZ2b2w9RGVmYXVsdCZpZD0xMTY4NTAmdmVyPTEwMDAmZmlsZT0xMCstK01hbnVhbCtNJUMzJUIzZHVsbytDb21wcmFzKy0rU29saWNpdGElQzMlQTclQzMlQTNvK2UrUmVsYXQlQzMlQjNyaW9zLmRvY3gmY3JjPTM5NjM0MzQ3Njkmc2l6ZT0xLjA0NTkxMiZ1SWQ9MTExNTUxJmZTSWQ9NTg1NiZ1U0lkPTU4NTYmZD1mYWxzZSZ0a249JnB1YmxpY1VybD10cnVl.docx"
+                     download="proposed_file_name">Download</a>
+                  <hr>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <script>
+      //setTimeout(function() { alert("Sempre Verificar se seu chamado no GLPI já foi Finalizado"); }, 3000);
+      function mostrar1() {
+         $("#esquerda, #direita,  #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
+         $("#div01").show(900);
+      };
+
+      function mostrar2() {
+         $("#esquerda, #direita, #div01,  #div03, #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
+         $("#div02").show(900);
+      };
+
+      function mostrar3() {
+         $("#esquerda, #direita, #div01, #div02,  #div04, #div05, #div06, #div07, #div08, #div09").hide(900);
+         $("#div03").show();
+      };
+
+      function mostrar4() {
+         $("#esquerda, #direita, #div01, #div02, #div03,  #div05, #div06, #div07, #div08, #div09").hide(900);
+         $("#div04").show();
+      };
+
+      function mostrar5() {
+         $("#esquerda, #direita, #div01, #div02, #div03, #div04,  #div06, #div07, #div08, #div09").hide(900);
+         $("#div05").show();
+      };
+
+      function mostrar6() {
+         $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05,  #div07, #div08, #div09").hide(900);
+         $("#div06").show();
+      };
+
+      function mostrar7() {
+         $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06,  #div08, #div09").hide(900);
+         $("#div07").show();
+      };
+
+      function mostrar8() {
+         $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06, #div07,  #div09").hide(900);
+         $("#div08").show();
+      };
+
+      function mostrar9() {
+         $("#esquerda, #direita, #div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08").hide(900);
+         $("#div09").show();
+      };
+
+      function mostrar10() {
+         $("#div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09, #esquerda-cnpjs, #direita-cnpjs, #h1-cnpjs, #botao-cnpj, #h1-apoiadas").hide(900);
+         $("#esquerda, #direita, #botao-ramais, #h1-ramais, #button-show-cnpjs").show(2000);
+      };
+
+      function cnpjs() {
+         $("#div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09, #esquerda, #direita, #botao-ramais, #h1-ramais, #button-show-cnpjs, #h1-apoiadas").hide(900);
+         $("#esquerda-cnpjs, #direita-cnpjs, #h1-cnpjs, #botao-cnpj").show(2000);
+      };
+
+      function apoiadas() {
+         $("#div01, #div02, #div03, #div04, #div05, #div06, #div07, #div08, #div09, #esquerda-cnpjs, #direita-cnpjs, #h1-cnpjs, #botao-cnpj").hide(900);
+         $("#apoiadas, #h1-apoiadas, #botao-cnpj").show(2000);
+      };
+   </script>
+   <!--------------------------------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

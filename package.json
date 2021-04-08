@@ -1,0 +1,24 @@
+{
+  "name": "RAMAIS_SEDE_ADM",
+  "version": "1.0.0",
+  "description": "1. sede admisntrativa Jaci - SP 2. Hospital Padre Tiago 3. hospital Estadual Porto Primavera",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALSF/RAMAIS_SEDE_ADM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALSF/RAMAIS_SEDE_ADM/issues"
+  },
+  "homepage": "https://github.com/ALSF/RAMAIS_SEDE_ADM#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "forever": "^3.0.4"
+  }
+}
